@@ -4,7 +4,6 @@ import "node:buffer"
 
 let folder = process.argv[2] //gets the cmdline args for what to dechunkify
 let amountOfChunks = process.argv[3]
-let chunkSize = process.argv[4]
 let fileName = process.argv[5]
 
 let getBuffer = (file) => {
@@ -20,7 +19,12 @@ let saveToFile = (thing, path) => {
 let chunk = []
 
 for(let i = 0; i <= amountOfChunks; ++i){ //gets a chunk array
-    chunk[i] = getBuffer(`${folder}/${fileName}-chunk${i}.chunk`)
+    try{
+       chunk[i] = getBuffer(`${folder}/${fileName}-chunk${i}.chunk`)
+    }
+    catch {
+        chunk[i] = getBuffer(`${fileName}-chunk${i}.chunk`)
+    }
 }
 
 console.log("Re-assembling chunk 0")

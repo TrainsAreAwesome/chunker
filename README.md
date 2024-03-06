@@ -17,9 +17,5 @@ to whoever you want to be able to dechunk.
 thats it!
 
 ### dechunking
-first go into a file manager and goto the chunkifile directory and create a folder. name the folder the folder name that was sent to you.
-the folder name should end in `-chunks`.
-
-paste all the .chunk files into the new folder you just made
-then go back to the chunkifile directory and open a terminal in that directory, and run the dechunk command.
+go to the chunkifile directory and paste the .chunck files. then open a terminal in that directory, and run the dechunk command.
 done! the file name of the dechunked file will be listed after dechunking finishes
