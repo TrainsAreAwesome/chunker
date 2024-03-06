@@ -1,0 +1,15 @@
+{
+  "name": "chunker",
+  "version": "1.0.0",
+  "description": "Splits files apart so you can share them even on platforms with file size limits, and combines them again",
+  "main": "chunkify.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mwgie aka TrainsAreAwesome",
+  "license": "MIT",
+  "dependencies": {
+    "mwgiestools": "^1.1.4"
+  }
+}
