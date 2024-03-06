@@ -21,7 +21,7 @@ let saveChunkedFile = (ar, originalFileName, dechunkCommand) => {
         console.log("Directory allready exists. Continuing anyway...")
     }
     for(let i = 0; i < ar.length; ++i) {
-        saveToFile(ar[i], `./${originalFileName}-chunks/chunk${i}.chunk`, i)
+        saveToFile(ar[i], `./${originalFileName}-chunks/${originalFileName}-chunk${i}.chunk`, i)
     }
     MWGIESTOOLS.renderText("chunked file", "G", "W")
     console.log(dechunkCommand)

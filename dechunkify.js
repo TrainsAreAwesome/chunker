@@ -14,17 +14,17 @@ let getBuffer = (file) => {
 let saveToFile = (thing, path) => {
     writeFileSync(path, thing) //this is for saving the dechunked file
     MWGIESTOOLS.renderText("dechunked file", "G", "W")
-    console.log(`Dechunked file as: ${path}`)
+    console.log(`Dechunked file saved as: ${path}`)
 }
 
 let chunk = []
 
 for(let i = 0; i <= amountOfChunks; ++i){ //gets a chunk array
-    chunk[i] = getBuffer(`${folder}/chunk${i}.chunk`)
+    chunk[i] = getBuffer(`${folder}/${fileName}-chunk${i}.chunk`)
 }
 
+console.log("Re-assembling chunk 0")
 let assembledBuffer = chunk[0]
-
 
 for(let i = 1; i < chunk.length; ++i) {
     assembledBuffer = Buffer.concat([assembledBuffer, chunk[i]])

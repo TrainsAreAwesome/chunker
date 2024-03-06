@@ -1,6 +1,6 @@
 {
-  "name": "chunker",
-  "version": "1.0.0",
+  "name": "chunkifile",
+  "version": "1.0.1",
   "description": "Splits files apart so you can share them even on platforms with file size limits, and combines them again",
   "main": "chunkify.js",
   "type": "module",
