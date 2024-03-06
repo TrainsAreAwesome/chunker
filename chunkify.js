@@ -50,7 +50,7 @@ let chunkify = (originalFileName, chunkSize = 25) => { //arg 0 is file to chunki
         currentChunk = Buffer.copyBytesFrom(originalFile, ((chunkSize * 1000000) * i), chunkSize * 1000000)
         chunk[i] = currentChunk
     }
-    let dechunkCommand = `\nCommand to dechunkify:\nnode dechunkify.js ${originalFileName}-chunks ${amountOfSplits - 1} ${chunkSize} ${originalFileName}`
+    let dechunkCommand = `\nCommand to dechunkify:\nnode dechunkify.js ${originalFileName}-chunks ${amountOfSplits - 1} ${chunkSize} ${originalFileName}\nName the folder where the chunks go: ${originalFileName}-chunks\n`
     saveChunkedFile(chunk, originalFileName, dechunkCommand)
 }
 
